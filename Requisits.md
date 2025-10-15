@@ -26,10 +26,15 @@ L’objectiu de TapatApp consisteix en proporcionar a totes les famílies afecta
 ## Actors de la App
 
 · Cuidadora principal (mare/pare principal responsable del tractament)
+
 · Cuidadors secundaris (avis, mestres, cangurs, monitors...)
+
 · Oftalmòleg/oftalmòloga
+
 · Administrador/a de l’associació (gestiona difusió i suport)
+
 · Infant pacient (usuari indirecte)
+
 · Part "Pública"
 
 ## Requisits funcionals RF i Requisits de Funcionals
@@ -38,6 +43,7 @@ L’objectiu de TapatApp consisteix en proporcionar a totes les famílies afecta
 · RF1: Login/Autenticació
 Tots els usuaris s'han de autenticar
 Actors: Admin, Oftalmòlegs, Cuidador principal, Cuidadors secundaris, Infant.
+
 · RF2: Registre cuidador
 (Descripcio)
 Actors: Cuidador principal.
