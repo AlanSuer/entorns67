@@ -12,10 +12,15 @@ L’objectiu de TapatApp consisteix en proporcionar a totes les famílies afecta
 
 ## Objectiu del Projecte
 · Control del temps del pegat de l'infant
+
 · Control del tractament de la 1/2 del temps que l'infant està despert.
+
 · Control del tractament d'un temps fix que l'infant està despert.
+
 · Compartir informació del tractament amb el servei mèdic
+
 · Accés restringit per tipus d'usuari al control del pegat. App Multiusuari.
+
 · Desenvolupar una App Móbil.
 
 ## Actors de la App
