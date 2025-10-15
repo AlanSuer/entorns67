@@ -41,9 +41,13 @@ L’objectiu de TapatApp consisteix en proporcionar a totes les famílies afecta
 
 ## RF
 · RF1: Login/Autenticació
+
 Tots els usuaris s'han de autenticar
+
 Actors: Admin, Oftalmòlegs, Cuidador principal, Cuidadors secundaris, Infant.
 
 · RF2: Registre cuidador
+
 (Descripcio)
+
 Actors: Cuidador principal.
