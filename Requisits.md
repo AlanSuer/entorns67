@@ -40,14 +40,27 @@ L’objectiu de TapatApp consisteix en proporcionar a totes les famílies afecta
 ## Requisits funcionals RF i Requisits de Funcionals
 
 ## RF
-· RF1: Login/Autenticació
 
-Tots els usuaris s'han de autenticar
+<div class="alert alert-info">
+<h4>ID: RF1</h4>
+<h5>Titol: Registre </h5>
+<h5>ROL: Tutor </h5>
+<p>Com a Usuari Tutor vull poder registrar-me a l'aplicació amb
+correu electrònic, nom i password, per poder accedir-hi.</p>
+</div>
 
-Actors: Admin, Oftalmòlegs, Cuidador principal, Cuidadors secundaris, Infant.
+<div class="alert alert-info">
+<h4>ID: RF1</h4>
+<h5>Titol: Login </h5>
+<h5>ROL: Tutor </h5>
+<p>Com a Usuari Tutor vull poder accedir de forma segura a l'aplicació amb
+correu electrònic i password.</p>
+</div>
 
-· RF2: Registre cuidador
-
-(Descripcio)
-
-Actors: Cuidador principal.
+<div class="alert alert-info">
+<h4>ID: RF1</h4>
+<h5>Titol: Alta </h5>
+<h5>ROL: Tutor </h5>
+<p>Com a Usuari Tutor vull poder accedir de forma segura a l'aplicació amb
+correu electrònic i password.</p>
+</div>
