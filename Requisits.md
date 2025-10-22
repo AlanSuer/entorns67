@@ -23,44 +23,77 @@ L’objectiu de TapatApp consisteix en proporcionar a totes les famílies afecta
 
 · Desenvolupar una App Móbil.
 
-## Actors de la App
+<h2>Actors de la Aplicació</h2>
 
-· Cuidadora principal (mare/pare principal responsable del tractament)
+<ul>
+  <li>Administrador: gestiona usuaris i paràmetres generals de l’aplicació.</li>
+  <li>Servei mèdic (oftalmòlegs): consulta les dades del tractament dels pacients.</li>
+  <li>Tutors (mares/pares): controlen el tractament i poden afegir cuidadors.</li>
+  <li>Cuidadors (mestres, avis, cangurs…): actualitzen l’estat del pegat mentre tenen l’infant.</li>
+  <li>Infant: usuari indirecte que rep el tractament.</li>
+  <li>Part pública: accés informatiu o de registre inicial.</li>
+</ul>
 
-· Cuidadors secundaris (avis, mestres, cangurs, monitors...)
+<ol>
+  <li>Administrador: gestiona usuaris i paràmetres generals de l’aplicació.</li>
+  <li>Servei mèdic (oftalmòlegs): consulta les dades del tractament dels pacients.</li>
+  <li>Tutors (mares/pares): controlen el tractament i poden afegir cuidadors.</li>
+  <li>Cuidadors (mestres, avis, cangurs…): actualitzen l’estat del pegat mentre tenen l’infant.</li>
+  <li>Infant: usuari indirecte que rep el tractament.</li>
+  <li>Part pública: accés informatiu o de registre inicial.</li>
+</ol>
 
-· Oftalmòleg/oftalmòloga
-
-· Administrador/a de l’associació (gestiona difusió i suport)
-
-· Infant pacient (usuari indirecte)
-
-· Part "Pública"
 
 ## Requisits funcionals RF i Requisits de Funcionals
 
 ## RF
 
 <div class="alert alert-info">
-<h4>ID: RF1</h4>
-<h5>Titol: Registre </h5>
-<h5>ROL: Tutor </h5>
-<p>Com a Usuari Tutor vull poder registrar-me a l'aplicació amb
-correu electrònic, nom i password, per poder accedir-hi.</p>
+  <h4>RF1: Registre d’usuari</h4>
+  <h5>Rol: Tutor</h5>
+  <p>Com a tutor/a vull poder registrar-me amb correu electrònic, nom i contrasenya per poder accedir a l’aplicació i gestionar el tractament del meu fill.</p>
 </div>
 
 <div class="alert alert-info">
-<h4>ID: RF1</h4>
-<h5>Titol: Login </h5>
-<h5>ROL: Tutor </h5>
-<p>Com a Usuari Tutor vull poder accedir de forma segura a l'aplicació amb
-correu electrònic i password.</p>
+  <h4>RF2: Inici de sessió</h4>
+  <h5>Rol: Tutor</h5>
+  <p>Com a tutor/a vull poder iniciar sessió de forma segura amb les meves credencials per accedir a les dades del meu infant.</p>
 </div>
 
 <div class="alert alert-info">
-<h4>ID: RF1</h4>
-<h5>Titol: Alta </h5>
-<h5>ROL: Tutor </h5>
-<p>Com a Usuari Tutor vull poder accedir de forma segura a l'aplicació amb
-correu electrònic i password.</p>
+  <h4>RF3: Alta de l’infant</h4>
+  <h5>Rol: Tutor</h5>
+  <p>Com a tutor/a vull poder donar d’alta el meu fill o filla dins de l’aplicació per fer el seguiment del seu tractament amb pegat.</p>
 </div>
+
+<div class="alert alert-info">
+  <h4>RF4: Control del pegat</h4>
+  <h5>Rol: Tutor</h5>
+  <p>Com a tutor/a vull poder controlar les hores que el nen porta el pegat mentre està despert, per saber quant de temps li queda de tractament cada dia.</p>
+</div>
+
+<div class="alert alert-info">
+  <h4>RF5: Configuració del tractament</h4>
+  <h5>Rol: Tutor</h5>
+  <p>Com a tutor/a vull poder indicar si el tractament és de temps fix o la meitat del temps despert, per tal que l’aplicació faci els càlculs automàticament.</p>
+</div>
+
+<div class="alert alert-info">
+  <h4>RF6: Gestió de cuidadors</h4>
+  <h5>Rol: Tutor</h5>
+  <p>Com a tutor/a vull poder afegir o eliminar cuidadors perquè també puguin controlar el temps del pegat quan ells estiguin amb l’infant.</p>
+</div>
+
+<div class="alert alert-info">
+  <h4>RF7: Control del pegat pels cuidadors</h4>
+  <h5>Rol: Cuidador</h5>
+  <p>Com a cuidador/a vull poder marcar quantes hores porta el nen amb el pegat i veure l’estat del tractament per seguir correctament la pauta mèdica.</p>
+</div>
+
+<div class="alert alert-info">
+  <h4>RF8: Consulta mèdica</h4>
+  <h5>Rol: Servei mèdic</h5>
+  <p>Com a metge o metgessa vull poder consultar les hores totals de tractament registrades a l’aplicació per avaluar el progrés de cada pacient.</p>
+</div>
+
+## RNF
