@@ -40,3 +40,23 @@ Python
 ### c. Gestió d'accesibilitat
 
 - Nivells A, AA, AAA d'accesibilitat
+
+## 3. Requisits Generals Infraestructura
+
+### a. Gestió d'usuari i autenticació
+
+- Rols d'usuari: Tutor i cuidador
+- Seguretat password: md5m, sha256 o sha512
+
+### b. Requisits d'Infraestructura
+
+- Xarxa: Internet
+- Espai d'emmagatzematge a Servidor: 1TB
+- APIs a tercers: No en fem servir
+
+## 4. Requisits del Procés de Desenvolupament
+
+- IDE's: VSCode Python, Android Studio, Python
+- Control de versions: git, GitHub
+- Metodologia de desenvolupament: SCRUM
+- Testing i proves de qualitat(QA): Tests i proves unitàrias
