@@ -1,0 +1,20 @@
+flowchart LR
+    subgraph Client["Bloc Client"]
+        Vista[/"Vista\n(Input: Nom)"/]
+        DaoClient["DaoClient\n(getUserName)"]
+        
+        Vista <--> DaoClient
+    end
+
+    DaoClient -- "HTTP Request" --> WebService
+
+    subgraph Server["Bloc Servidor"]
+        WebService["WebService\n(getUserByName)"]
+        Dao["Dao\n(getUserByName)"]
+        DataStore["Llista d'Usuaris"]
+        
+        WebService <--> Dao
+        Dao <--> DataStore
+    end
+
+    WebService -- "HTTP Response" --> DaoClient
