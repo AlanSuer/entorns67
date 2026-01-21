@@ -36,4 +36,4 @@ URL Server desenvolupament: http://localhost:5000/
 
 | URL | Method | Paràmetres | Descripció | Output |
 |--------------|--------------|--------------|----------|----------|
-| /user       | Dato 2       | Dato 3       |Dato 4       |Dato 5   |
+| /user   | GET    | username <String> obligatori | Retornem la informació   de    | { "code_response=1, descripcio="", name="Alan Aparicio", username="aaparicio",password="P@ssw0rd", rol="tutor", email="aaparicio@xtec.cat"}
