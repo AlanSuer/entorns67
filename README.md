@@ -37,3 +37,6 @@ URL Server desenvolupament: http://localhost:5000/
 | URL | Method | Paràmetres | Descripció | Output |
 |--------------|--------------|--------------|----------|----------|
 | /user   | GET    | username <String> obligatori | Retornem la informació   de    | { "code_response=1, descripcio="", name="Alan Aparicio", username="aaparicio",password="P@ssw0rd", rol="tutor", email="aaparicio@xtec.cat"}
+
+## Disseny App Gestió Entrades
+[Disseny d’una Aplicació de Gestió d’Entrades per a Esdeveniments](diagrama_uml.mermaid)
