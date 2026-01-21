@@ -1,0 +1,23 @@
+classDiagram
+direction TB
+    class Artista {
+	    id: int
+	    nom: str
+    }
+
+    class `Cançó` {
+	    id: int
+	    titol: str
+	    durada: float
+    }
+
+    class `Àlbum` {
+	    id: int
+	    titol: str
+	    data_llancament: date
+    }
+
+    Artista "1" --> "0..*" `Àlbum` : crea
+    `Àlbum` "1" --> "0..*" `Cançó` : conté
+    `Àlbum` "1" --> "1" Artista : pertany
+    `Cançó` "1" --> "1" `Àlbum` : pertany

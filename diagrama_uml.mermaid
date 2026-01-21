@@ -1,0 +1,106 @@
+classDiagram
+direction TB
+
+class Usuari {
+  +UUID id
+  +String nom
+  +String email
+  -String contrasenyaHash
+  +DateTime dataRegistre
+  +String tipusUsuari
+  +registrar(nom, email, contrasenya) bool
+  +iniciarSessio(email, contrasenya) bool
+  +tancarSessio() void
+}
+
+class Client {
+  +cercarEsdeveniments(criteri) List~Esdeveniment~
+  +comprarEntrada(e: Esdeveniment, qtat: int, metode: MetodePagament) Pagament
+  +consultarCompres() List~Entrada~
+}
+
+class Administrador {
+  +crearEsdeveniment(e: Esdeveniment) Esdeveniment
+  +modificarEsdeveniment(e: Esdeveniment) Esdeveniment
+  +eliminarEsdeveniment(eventId: UUID) bool
+}
+
+Usuari <|-- Client
+Usuari <|-- Administrador
+
+class Esdeveniment {
+  +UUID id
+  +String nom
+  +String descripcio
+  +DateTime data
+  +String ubicacio
+  +int aforament
+  +int entradesDisponibles
+  +publicar() void
+  +actualitzarDisponibilitat() void
+  +generarEntrades(preu: decimal, qtat: int) List~Entrada~
+}
+
+class Entrada {
+  +UUID id
+  +decimal preu
+  +EstatEntrada estat
+  +String codiQR
+  +reservar() bool
+  +marcarVenuda() void
+  +cancelarVenda() void
+}
+
+class Pagament {
+  +UUID id
+  +decimal importTotal
+  +DateTime dataPagament
+  +EstatPagament estat
+  +autoritzar() bool
+  +capturar() bool
+  +reemborsar() bool
+}
+
+class MetodePagament {
+  +String tipus
+  +String titular
+  +validar() bool
+  +tokenitzar() String
+  +desarPreferencia() void
+}
+
+class Compra {
+  +UUID id
+  +DateTime dataCompra
+  +decimal total
+  +afegirEntrada(i: Entrada) void
+  +calcularTotal() decimal
+  +cancel·lar() bool
+}
+
+class EstatEntrada {
+  <<enumeration>>
+  Disponible
+  Venuda
+}
+
+class EstatPagament {
+  <<enumeration>>
+  Pendent
+  Autoritzat
+  Capturat
+  Reemborsat
+  Fallit
+}
+
+%% Relacions i multiplicitats
+Administrador "1" --> "0..*" Esdeveniment : gestiona
+Esdeveniment "1" *-- "1..*" Entrada : conté
+Client "1" --> "0..*" Compra : realitza
+Compra "1" *-- "1..*" Entrada : inclou
+Compra "1" --> "1" Pagament : pagaAmb
+Pagament "1" --> "1" MetodePagament : usa
+Entrada "0..1" --> "1" Client : propietari
+Entrada --> Esdeveniment : perA
+Entrada --> EstatEntrada
+Pagament --> EstatPagament
