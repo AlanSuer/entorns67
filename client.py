@@ -35,9 +35,9 @@ class ViewConsole:
 
     def showUserData(self, userData):
         if userData is None:
-            print("❌ Usuari no trobat")
+            print("Usuari no trobat")
         else:
-            print("✅ Usuari trobat:")
+            print("Usuari trobat:")
             print(userData)
 
 
