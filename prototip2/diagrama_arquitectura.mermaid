@@ -1,0 +1,30 @@
+graph LR
+    subgraph Client
+        A1[Cliente] --> A2[Interfaz de Usuario]
+        A2 --> A3[Cliente HTTP API]
+    end
+    
+    subgraph Server
+        B1[Web Service] --> B2[Controlador]
+        B2 --> B3[Daos]
+        B2 --> B4[Endpoint Login]
+        B2 --> B5[Endpoint Child]
+        B3 --> B6[Base de Datos]
+    end
+
+    A3 -->|Petición HTTP| B4
+    A3 -->|Petición HTTP| B5
+    B4 -->|Consulta| B3
+    B5 -->|Consulta| B3
+
+    %% Endpoints de Server
+    B4_0["Endpoint /login: POST"] --> B4_1[Valida Usuario]
+    B5_0["Endpoint /child: POST"] --> B5_1[Devuelve Niños]
+
+    %% Roles
+    B3 -->|CRUD| B6
+    B6 -->|Guarda Datos| B3
+    B1 -->|Conexión a Servicios Externos| B7[Servicio Externo]
+    
+    style A1 fill:#f9f,stroke:#333,stroke-width:2px
+    style B1 fill:#ccf,stroke:#333,stroke-width:2px

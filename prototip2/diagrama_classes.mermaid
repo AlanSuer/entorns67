@@ -1,0 +1,67 @@
+classDiagram
+    class User {
+        +int id
+        +string username
+        +string password
+        +string email
+        +int idrole
+        +__str__()
+    }
+
+    class Child {
+        +int id
+        +string child_name
+        +int sleep_average
+        +int treatment_id
+        +int time
+    }
+
+    class Tap {
+        +int id
+        +int child_id
+        +int status_id
+        +int user_id
+        +string init
+        +string end
+    }
+
+    class Status {
+        +int id
+        +string name
+    }
+
+    class Role {
+        +int id
+        +string type_rol
+    }
+
+    class Treatment {
+        +int id
+        +string name
+    }
+
+    class WebService {
+        +login(username, password)
+        +loginByToken(token)
+        +child(iduser)
+    }
+
+    class Dao {
+        +save()
+        +get()
+        +update()
+        +delete()
+    }
+
+    class ADT {
+        +int id
+        +string name
+    }
+
+    User "1" -- "1" Role : hasRole
+    User "1" -- "*" Tap : creates
+    Child "1" -- "1" Treatment : undergoes
+    Child "1" -- "*" Tap : hasTaps
+    Tap "1" -- "1" Status : hasStatus
+    WebService "1" -- "*" Dao : interactsWith
+    ADT "1" -- "*" Dao : defines
